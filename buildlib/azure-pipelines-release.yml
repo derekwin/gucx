@@ -75,6 +75,19 @@ stages:
             name: Result
             displayName: Check build condition
 
+  - stage: Debug
+    dependsOn: Prepare
+    jobs:
+      - job: Debug
+        pool:
+          name: MLNX
+          demands: ucx_docker
+        steps:
+        - checkout: none
+        - bash: |
+            set -x
+            echo "Launch value is $(CheckRelease.Result.Launch)"
+          displayName: Debug launch
 
   - stage: GitHubDraft
     condition: eq(dependencies.Prepare.outputs['CheckRelease.Result.Launch'], 'True')
