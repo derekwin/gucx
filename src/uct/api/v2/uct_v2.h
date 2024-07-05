@@ -798,7 +798,7 @@ typedef enum uct_md_attr_field {
  * This structure defines the attributes of a Memory Domain which include
  * maximum memory that can be allocated, credentials required for accessing the memory,
  * CPU mask indicating the proximity of CPUs, and bitmaps indicating the types
- * of memory (CPU/CUDA/ROCM) that can be detected, allocated, accessed, and
+ * of memory (CPU/CUDA/ROCM/GUCXT) that can be detected, allocated, accessed, and
  * memory types for which dmabuf attributes can be returned.
  */
 typedef struct {

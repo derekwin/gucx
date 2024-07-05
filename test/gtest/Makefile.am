@@ -260,6 +260,21 @@ gtest_LDADD += \
 endif
 endif
 
+if HAVE_GUCXT
+if HAVE_GNUXX11
+gtest_SOURCES += \
+	ucm/gucxt_hooks.cc
+gtest_CPPFLAGS += \
+	$(GUCXT_CPPFLAGS)
+gtest_CXXFLAGS += \
+	$(GUCXT_CXXFLAGS)
+gtest_LDADD += \
+	$(GUCXT_LDFLAGS) \
+	$(GUCXT_LIBS) \
+	$(top_builddir)/src/uct/gucxt/libuct_gucxt.la
+endif
+endif
+
 noinst_HEADERS = \
 	common/mem_buffer.h \
 	common/test.h \

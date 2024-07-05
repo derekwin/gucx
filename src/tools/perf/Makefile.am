@@ -9,7 +9,7 @@
 # See file LICENSE for terms.
 #
 
-SUBDIRS = cuda rocm lib
+SUBDIRS = cuda rocm gucxt lib
 CC      = $(UCX_PERFTEST_CC)
 
 noinst_HEADERS = \

@@ -30,6 +30,9 @@
 #endif
 #include <sys/resource.h>
 
+#if HAVE_GUCXT
+#include <gmem/api/gmem.h>
+#endif
 
 #define UCT_IB_MD_RCACHE_DEFAULT_ALIGN 16
 
@@ -1206,6 +1209,10 @@ ucs_status_t uct_ib_md_open_common(uct_ib_md_t *md,
         /* check if ROCM KFD driver is loaded */
         uct_ib_check_gpudirect_driver(md, "/dev/kfd", UCS_MEMORY_TYPE_ROCM);
 
+        // gucxt note : add check for gucxt
+#if HAVE_GUCXT
+        uct_ib_check_gpudirect_driver(md, gpudirect_driver_path_str(), UCS_MEMORY_TYPE_GUCXT);
+#endif
         /* Check for dma-buf support */
         uct_ib_md_check_dmabuf(md);
     }

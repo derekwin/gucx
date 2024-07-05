@@ -255,6 +255,15 @@ build_rocm() {
 }
 
 #
+# Build GUCXT
+#
+build_gucxt() {
+	echo "==== Build with enable gucxt  ===="
+	${WORKSPACE}/contrib/configure-devel --prefix=$ucx_inst --with-gucxt
+	$MAKEP
+}
+
+#
 # Build with clang compiler
 #
 build_clang() {

@@ -26,6 +26,8 @@ const (
 	UCS_MEMORY_TYPE_CUDA_MANAGED UcsMemoryType = C.UCS_MEMORY_TYPE_CUDA_MANAGED /**< NVIDIA CUDA managed (or unified) memory */
 	UCS_MEMORY_TYPE_ROCM         UcsMemoryType = C.UCS_MEMORY_TYPE_ROCM         /**< AMD ROCM memory */
 	UCS_MEMORY_TYPE_ROCM_MANAGED UcsMemoryType = C.UCS_MEMORY_TYPE_ROCM_MANAGED /**< AMD ROCM managed system memory */
+	UCS_MEMORY_TYPE_GUCXT         UcsMemoryType = C.UCS_MEMORY_TYPE_GUCXT         /**< GUCXT  memory */
+	UCS_MEMORY_TYPE_GUCXT_MANAGED UcsMemoryType = C.UCS_MEMORY_TYPE_GUCXT_MANAGED /**< GUCXT  managed system memory */
 	UCS_MEMORY_TYPE_UNKNOWN      UcsMemoryType = C.UCS_MEMORY_TYPE_UNKNOWN
 )
 

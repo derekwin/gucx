@@ -98,6 +98,7 @@ tl_aliases = {
     "ugni": ["ugni_smsg", "ugni_udt:aux", "ugni_rdma", ],
     "cuda": ["cuda_copy", "cuda_ipc", "gdr_copy", ],
     "rocm": ["rocm_copy", "rocm_ipc", "rocm_gdr", ],
+    "gucxt": [],
 }
 
 @contextlib.contextmanager

@@ -92,6 +92,8 @@ public class UcsConstants {
         public static int UCS_MEMORY_TYPE_CUDA_MANAGED;  // NVIDIA CUDA managed (or unified) memory
         public static int UCS_MEMORY_TYPE_ROCM;          // AMD ROCM memory
         public static int UCS_MEMORY_TYPE_ROCM_MANAGED;  // AMD ROCM managed system memory
+        public static int UCS_MEMORY_TYPE_GUCXT;          // GUCXT memory
+        public static int UCS_MEMORY_TYPE_GUCXT_MANAGED;  // GUCXT managed system memory
         public static int UCS_MEMORY_TYPE_LAST;
         public static int UCS_MEMORY_TYPE_UNKNOWN;
     }
