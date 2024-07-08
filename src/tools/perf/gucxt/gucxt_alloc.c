@@ -24,7 +24,7 @@ static ucs_status_t ucx_perf_gucxt_init(ucx_perf_context_t *perf)
     
     ret = gmem_init(group_index);
     if(ret != GMEM_SUCCESS) {
-        ucs_error("failed to initialize gucxt");
+        ucs_error("failed to initialize gucxt %d", group_index);
         return UCS_ERR_NO_DEVICE;
     }
 
