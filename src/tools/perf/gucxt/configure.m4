@@ -6,6 +6,6 @@
 
 UCX_CHECK_GUCXT
 
-AS_IF([test "x$guctx_happy" = "xyes"], [ucx_perftest_modules="${ucx_perftest_modules}:guctx"])
+AS_IF([test "x$gucxt_happy" = "xyes"], [ucx_perftest_modules="${ucx_perftest_modules}:gucxt"])
 
-AC_CONFIG_FILES([src/tools/perf/guctx/Makefile])
+AC_CONFIG_FILES([src/tools/perf/gucxt/Makefile])

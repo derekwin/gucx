@@ -303,6 +303,12 @@ AM_CONDITIONAL([HAVE_MLX5_DV], [test "x$with_mlx5_dv" = xyes])
 AM_CONDITIONAL([HAVE_DEVX],    [test -n "$have_devx"])
 AM_CONDITIONAL([HAVE_MLX5_HW_UD], [test "x$with_mlx5_dv" != xno -a "x$has_get_av" != xno])
 
+AS_IF([test ! -z "$with_gucxt" -a "x$with_gucxt" != "xyes" -a "x$with_gucxt" != "xguess"],[
+    CPPFLAGS="$CPPFLAGS -I/home/sdu/proj/gucx-trunk-install/include"
+    LDFLAGS="$LDFLAGS -L/home/sdu/proj/gucx-trunk-install/lib"
+])
+
+
 uct_ib_modules=""
 m4_include([src/uct/ib/rdmacm/configure.m4])
 AC_DEFINE_UNQUOTED([uct_ib_MODULES], ["${uct_ib_modules}"], [IB loadable modules])

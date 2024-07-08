@@ -1679,6 +1679,11 @@ ucs_status_t uct_md_mem_query(uct_md_h md, const void *address, size_t length,
  * Memory Domain used for allocation. This structure is passed to interface
  * and the memory is allocated by memory allocation functions @ref uct_mem_alloc.
  */
+
+#if HAVE_GUCXT
+#include <gmem/api/gmem.h>
+#endif
+
 typedef struct uct_allocated_memory {
     void                     *address; /**< Address of allocated memory */
     size_t                   length;   /**< Real size of allocated memory */
@@ -1686,6 +1691,9 @@ typedef struct uct_allocated_memory {
     ucs_memory_type_t        mem_type; /**< type of allocated memory */
     uct_md_h                 md;       /**< if method==MD: MD used to allocate the memory */
     uct_mem_h                memh;     /**< if method==MD: MD memory handle */
+#if HAVE_GUCXT
+    gmem_t                   gmem; /* gucxt support */
+#endif
 } uct_allocated_memory_t;
 
 

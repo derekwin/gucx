@@ -66,6 +66,13 @@ $ make -j8
 $ make install
 ```
 
+```
+./autogen.sh
+./contrib/configure-release --prefix=/home/sdu/proj/gucx-install --with-gucxt=/home/sdu/proj/gucx-trunk-install --with-mpi=/usr/bin
+make -j64
+make install
+```
+
 NOTE: Compiling support for various networks or other specific hardware may
 require additional command line flags when running configure.
 
