@@ -11,7 +11,6 @@
 
 #include <tools/perf/lib/libperf_int.h>
 
-#include <hip/hip_runtime.h>
 #include <ucs/sys/compiler.h>
 #include <gmem/api/gmem.h>
 

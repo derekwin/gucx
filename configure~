@@ -4837,7 +4837,7 @@ then :
        SCM_BRANCH=v1.16.x
 
 
-       SCM_VERSION=5ee8ab8
+       SCM_VERSION=4ff0a11
 
 
 else $as_nop
@@ -30802,13 +30802,10 @@ else
 fi
 
 
-if test ! -z "$with_gucxt" -a "x$with_gucxt" != "xyes" -a "x$with_gucxt" != "xguess"
-then :
-
-    CPPFLAGS="$CPPFLAGS -I/home/sdu/proj/gucx-trunk-install/include"
-    LDFLAGS="$LDFLAGS -L/home/sdu/proj/gucx-trunk-install/lib"
-
-fi
+# AS_IF([test ! -z "$with_gucxt" -a "x$with_gucxt" != "xyes" -a "x$with_gucxt" != "xguess"],[
+#     CPPFLAGS="$CPPFLAGS -I/home/sdu/proj/gucx-trunk-install/include"
+#     LDFLAGS="$LDFLAGS -L/home/sdu/proj/gucx-trunk-install/lib"
+# ])
 
 
 uct_ib_modules=""

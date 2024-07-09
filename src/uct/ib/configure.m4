@@ -304,8 +304,8 @@ AM_CONDITIONAL([HAVE_DEVX],    [test -n "$have_devx"])
 AM_CONDITIONAL([HAVE_MLX5_HW_UD], [test "x$with_mlx5_dv" != xno -a "x$has_get_av" != xno])
 
 AS_IF([test ! -z "$with_gucxt" -a "x$with_gucxt" != "xyes" -a "x$with_gucxt" != "xguess"],[
-    CPPFLAGS="$CPPFLAGS -I/home/sdu/proj/gucx-trunk-install/include"
-    LDFLAGS="$LDFLAGS -L/home/sdu/proj/gucx-trunk-install/lib"
+    CPPFLAGS="$CPPFLAGS -I$with_gucxt/include"
+    LDFLAGS="$LDFLAGS -L$with_gucxt/lib"
 ])
 
 
