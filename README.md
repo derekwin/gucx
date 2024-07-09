@@ -66,6 +66,7 @@ $ make -j8
 $ make install
 ```
 
+编译gucx
 ```
 ./autogen.sh
 ./contrib/configure-release --prefix=/home/sdu/proj/gucx-install --with-gucxt=/home/sdu/proj/gucx-trunk-install --with-mpi=/usr/bin
